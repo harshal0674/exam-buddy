@@ -3,6 +3,9 @@ import { put } from "@vercel/blob";
 import { prisma } from "../../../lib/prisma";
 import { v4 as uuidv4 } from "uuid";
 
+export const runtime = "nodejs";
+export const maxDuration = 30;
+
 export async function POST(request) {
   try {
     const formData = await request.formData();
