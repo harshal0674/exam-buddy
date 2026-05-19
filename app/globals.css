@@ -1,0 +1,114 @@
+:root {
+  --background: #000000;
+  --foreground: #f5f5f7;
+  --gray-dark: #1d1d1f;
+  --gray-light: #86868b;
+  --accent: #2997ff;
+  --accent-hover: #147ce5;
+  --border: #333336;
+}
+
+html {
+  height: 100%;
+  color-scheme: dark;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography Utility Classes */
+.h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--gray-light);
+}
+
+/* Common UI Elements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 980px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  background: var(--accent);
+  color: white;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--gray-dark);
+  color: var(--foreground);
+}
+
+.btn-secondary:hover {
+  background: #2a2a2c;
+}
+
+.card {
+  background: var(--gray-dark);
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.nav-blur {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
